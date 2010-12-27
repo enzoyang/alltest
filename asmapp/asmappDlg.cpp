@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "asmapp.h"
 #include "asmappDlg.h"
-
+#include "common.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -95,6 +95,11 @@ BOOL CasmappDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
+	
+	int a = addMethod(1,2);
+	CString str;
+	str.Format(_T("%d"),a);
+	AfxMessageBox(str);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
