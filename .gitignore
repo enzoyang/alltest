@@ -1,0 +1,6 @@
+debug/
+*.ncb
+*.lib
+*.exe
+*.ilk
+
