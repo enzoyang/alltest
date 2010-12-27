@@ -4,7 +4,9 @@
 #include "stdafx.h"
 #include <cstdlib>
 #include <iostream>
+
 using namespace std;
+
 int add(int x,int y)
 {
 	_asm
@@ -14,6 +16,7 @@ int add(int x,int y)
 	}
 	return y;
 }
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int x,y,sum;
