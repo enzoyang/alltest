@@ -48,6 +48,12 @@ END_MESSAGE_MAP()
 
 CasmappDlg::CasmappDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CasmappDlg::IDD, pParent)
+	, m_a(0)
+	, m_b(0)
+	, m_add(0)
+	, m_c(0)
+	, m_d(0)
+	, m_sub(0)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -55,6 +61,12 @@ CasmappDlg::CasmappDlg(CWnd* pParent /*=NULL*/)
 void CasmappDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_EDIT_A, m_a);
+	DDX_Control(pDX, IDC_EDIT_B, m_b);
+	DDX_Control(pDX, IDC_EDIT_ADD, m_add);
+	DDX_Control(pDX, IDC_EDIT_C, m_c);
+	DDX_Control(pDX, IDC_EDIT_D, m_d);
+	DDX_Control(pDX, IDC_EDIT_SUB, m_sub);
 }
 
 BEGIN_MESSAGE_MAP(CasmappDlg, CDialog)
@@ -96,10 +108,6 @@ BOOL CasmappDlg::OnInitDialog()
 
 	// TODO: 在此添加额外的初始化代码
 	
-	int a = addMethod(1,2);
-	CString str;
-	str.Format(_T("%d"),a);
-	AfxMessageBox(str);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }

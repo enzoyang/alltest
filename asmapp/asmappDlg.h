@@ -28,4 +28,16 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	int m_a;
+public:
+	int m_b;
+public:
+	int m_add;
+public:
+	int m_c;
+public:
+	int m_d;
+public:
+	int m_sub;
 };
