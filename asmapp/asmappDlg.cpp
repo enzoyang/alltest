@@ -61,12 +61,12 @@ CasmappDlg::CasmappDlg(CWnd* pParent /*=NULL*/)
 void CasmappDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	DDX_Control(pDX, IDC_EDIT_A, m_a);
-	DDX_Control(pDX, IDC_EDIT_B, m_b);
-	DDX_Control(pDX, IDC_EDIT_ADD, m_add);
-	DDX_Control(pDX, IDC_EDIT_C, m_c);
-	DDX_Control(pDX, IDC_EDIT_D, m_d);
-	DDX_Control(pDX, IDC_EDIT_SUB, m_sub);
+	DDX_Text(pDX, IDC_EDIT_A, m_a);
+	DDX_Text(pDX, IDC_EDIT_B, m_b);
+	DDX_Text(pDX, IDC_EDIT_ADD, m_add);
+	DDX_Text(pDX, IDC_EDIT_C, m_c);
+	DDX_Text(pDX, IDC_EDIT_D, m_d);
+	DDX_Text(pDX, IDC_EDIT_SUB, m_sub);
 }
 
 BEGIN_MESSAGE_MAP(CasmappDlg, CDialog)
@@ -74,6 +74,8 @@ BEGIN_MESSAGE_MAP(CasmappDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BUTTON_ADD, &CasmappDlg::OnBnClickedButtonAdd)
+	ON_BN_CLICKED(IDC_BUTTON_SUB, &CasmappDlg::OnBnClickedButtonSub)
 END_MESSAGE_MAP()
 
 
@@ -161,3 +163,21 @@ HCURSOR CasmappDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CasmappDlg::OnBnClickedButtonAdd()
+{
+	UpdateData(TRUE);//将控件值更新到变量
+	int a = m_a;
+	int b = m_b;
+	m_add = addMethod(a,b);
+	UpdateData(FALSE);//将变量值更新到控件
+}
+
+void CasmappDlg::OnBnClickedButtonSub()
+{
+	UpdateData(TRUE);//将控件值更新到变量
+	int a = m_c;
+	int b = m_d;
+	m_sub = subMethod(a,b);
+	UpdateData(FALSE);//将变量值更新到控件
+}

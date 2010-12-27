@@ -40,4 +40,8 @@ public:
 	int m_d;
 public:
 	int m_sub;
+public:
+	afx_msg void OnBnClickedButtonAdd();
+public:
+	afx_msg void OnBnClickedButtonSub();
 };
