@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inlineasm", "inlineasm\inli
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asmapp", "asmapp\asmapp.vcproj", "{8E53B8B2-DA6E-43B2-925A-9EC4B9BC99CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asmcall", "asmcall\asmcall.vcproj", "{9AD4A676-F6A1-4342-97D4-F936F346EFCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{8E53B8B2-DA6E-43B2-925A-9EC4B9BC99CA}.Debug|Win32.Build.0 = Debug|Win32
 		{8E53B8B2-DA6E-43B2-925A-9EC4B9BC99CA}.Release|Win32.ActiveCfg = Release|Win32
 		{8E53B8B2-DA6E-43B2-925A-9EC4B9BC99CA}.Release|Win32.Build.0 = Release|Win32
+		{9AD4A676-F6A1-4342-97D4-F936F346EFCC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9AD4A676-F6A1-4342-97D4-F936F346EFCC}.Debug|Win32.Build.0 = Debug|Win32
+		{9AD4A676-F6A1-4342-97D4-F936F346EFCC}.Release|Win32.ActiveCfg = Release|Win32
+		{9AD4A676-F6A1-4342-97D4-F936F346EFCC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -198,6 +198,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\common.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -229,6 +233,10 @@
 			</File>
 			<File
 				RelativePath=".\asmcallDlg.h"
+				>
+			</File>
+			<File
+				RelativePath=".\common.h"
 				>
 			</File>
 			<File
@@ -264,5 +272,9 @@
 		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="asmcall.rc"
+		/>
 	</Globals>
 </VisualStudioProject>

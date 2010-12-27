@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "asmcall.h"
 #include "asmcallDlg.h"
+#include "common.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -62,6 +63,8 @@ BEGIN_MESSAGE_MAP(CasmcallDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BUTTON_NORMAL, &CasmcallDlg::OnBnClickedButtonNormal)
+	ON_BN_CLICKED(IDC_BUTTON_ASM, &CasmcallDlg::OnBnClickedButtonAsm)
 END_MESSAGE_MAP()
 
 
@@ -148,3 +151,26 @@ HCURSOR CasmcallDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CasmcallDlg::OnBnClickedButtonNormal()
+{
+	int sum = addMethod(11,22);
+	CString str;
+	str.Format(_T("%d"),sum);
+	AfxMessageBox(str);
+}
+int asm_sum=0;
+void CasmcallDlg::OnBnClickedButtonAsm()
+{
+	_asm
+	{
+		push 44
+		push 55
+		call addMethod
+		mov asm_sum,eax
+		add esp,8
+	}
+	CString str;
+	str.Format(_T("%d"),asm_sum);
+	AfxMessageBox(str);
+}
